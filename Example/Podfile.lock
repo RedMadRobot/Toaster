@@ -1,0 +1,16 @@
+PODS:
+  - Toaster (0.1.0)
+
+DEPENDENCIES:
+  - Toaster (from `../`)
+
+EXTERNAL SOURCES:
+  Toaster:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Toaster: d0c2955828653dc44c03f18cf0a52b8c120de023
+
+PODFILE CHECKSUM: ad16e8bb4171bb55ecba048f8adc6828b3e02201
+
+COCOAPODS: 1.7.2

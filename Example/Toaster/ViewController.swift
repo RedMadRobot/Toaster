@@ -7,18 +7,19 @@
 //
 
 import UIKit
+import Toaster
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, NotificationPresentable {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        NotificationAppearance.shared.isShowToastSingle = false
+        NotificationAppearance.shared.isBlurView = false
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func toastCall(_ sender: Any) {
+        showFeedback(FeedbackNotification.somethingWentWrong)
     }
-
 }
 
