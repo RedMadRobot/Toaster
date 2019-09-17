@@ -1,29 +1,23 @@
 # Toaster
 
-[![CI Status](https://img.shields.io/travis/Andrey/Toaster.svg?style=flat)](https://travis-ci.org/Andrey/Toaster)
-[![Version](https://img.shields.io/cocoapods/v/Toaster.svg?style=flat)](https://cocoapods.org/pods/Toaster)
-[![License](https://img.shields.io/cocoapods/l/Toaster.svg?style=flat)](https://cocoapods.org/pods/Toaster)
-[![Platform](https://img.shields.io/cocoapods/p/Toaster.svg?style=flat)](https://cocoapods.org/pods/Toaster)
+Нотификации событий.
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-Toaster is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+##  Установка через CocoaPods
 
 ```ruby
-pod 'Toaster'
+pod 'Toaster', :git => "https://git.redmadrobot.com/foundation-ios/toaster.git"
 ```
 
-## Author
+##  Использование
 
-Andrey, a.nedov@redmadrobot.com
+Импортируйте модуль в вашем проекте
 
-## License
+```swift
+import Toaster
+```
 
-Toaster is available under the MIT license. See the LICENSE file for more info.
+Добавьте протокол  `NotificationPresentable`  и используйте метод `showFeedback()`.
+
+Для расширения шаблонов нотификации, используйте `FeedbackNotification`.
+
+Для изменения настроек(цвета, время и т.д.) нотификации, измените соответствующие атрибуты у  `NotificationAppearance.shared`.

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ToasterAppearance: class {
+public protocol ToasterAppearance: class {
     
     static var shared: Self { get set }
     

@@ -8,7 +8,7 @@
 import UIKit
 
 ///Текущая реализация протокола ToasterAppearance
-typealias DefaultAppearance = NotificationAppearance
+public typealias DefaultAppearance = NotificationAppearance
 
 /// Тип нотификации для пользователя.
 public enum FeedbackType {
@@ -20,13 +20,18 @@ public enum FeedbackType {
 public struct FeedbackNotification: Equatable {
     
     /// Тип нотификации.
-    public let type: FeedbackType
+    public var type: FeedbackType
     /// Тест обратной нотификации.
-    public let text: String
+    public var text: String
+    
+    public init(type: FeedbackType, text: String){
+        self.type = type
+        self.text = text
+    }
 }
 
 public extension FeedbackNotification {
-    
+
     static let somethingWentWrong = FeedbackNotification(type: .error, text: "Что-то пошло не так")
     static let notConnectedToInternet = FeedbackNotification(type: .error, text: "Нет соединения с интернетом")
     static let pleaseTryLater = FeedbackNotification(type: .error, text: "Ошибка, попробуйте позже")
@@ -179,21 +184,21 @@ private final class NotificationViewController: UIViewController {
 /// Контроллер окна нотификаций.
 ///
 /// - Note: Открыт для тестирования.
-class WindowController<A> where A: ToasterAppearance {
+public class WindowController<A> where A: ToasterAppearance {
     
     let appearance: A = A.shared
 }
 
-final class NotificationWindowController: WindowController<DefaultAppearance>{
+public final class NotificationWindowController: WindowController<DefaultAppearance>{
     
     private enum Direction {
         case up
         case down
     }
     
-    static let shared = NotificationWindowController()
+    public static let shared = NotificationWindowController()
     
-    var view: UIView { return window.rootViewController!.view }
+    public var view: UIView { return window.rootViewController!.view }
     
     private lazy var animationDuration: TimeInterval = self.appearance.animationDuration
     
@@ -213,7 +218,7 @@ final class NotificationWindowController: WindowController<DefaultAppearance>{
     
     private override init() {}
     
-    func show(_ view: UIView, with feedbackNotification: FeedbackNotification?) {
+    public func show(_ view: UIView, with feedbackNotification: FeedbackNotification?) {
         currentFeedbackNotification = feedbackNotification
         
         if appearance.isShowToastSingle{

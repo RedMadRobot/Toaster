@@ -16,6 +16,11 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		8D3F638CC370C5C6B00345B8 /* Pods_Toaster_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454CE332FAC2F272F5616D57 /* Pods_Toaster_Tests.framework */; };
 		BCF68C9E232FEEEE00AA5DEB /* FeedbackNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF68C9D232FEEEE00AA5DEB /* FeedbackNotification.swift */; };
+		BCF68CC62330D64F00AA5DEB /* SectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF68CC52330D64F00AA5DEB /* SectionType.swift */; };
+		BCF68CC82330D6E600AA5DEB /* SettingCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF68CC72330D6E600AA5DEB /* SettingCellType.swift */; };
+		BCF68CCA2330D7AD00AA5DEB /* ExampleCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF68CC92330D7AD00AA5DEB /* ExampleCellType.swift */; };
+		BCF68CD12330E1C300AA5DEB /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF68CD02330E1C300AA5DEB /* SwitchTableViewCell.swift */; };
+		BCF68CD32330E76A00AA5DEB /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF68CD22330E76A00AA5DEB /* ExampleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		69DFEFFDFD37DCD61C574299 /* Pods-Toaster_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toaster_Tests.release.xcconfig"; path = "Target Support Files/Pods-Toaster_Tests/Pods-Toaster_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8EF87548BF8A39FAC6C0BEFA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BCF68C9D232FEEEE00AA5DEB /* FeedbackNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackNotification.swift; sourceTree = "<group>"; };
+		BCF68CC52330D64F00AA5DEB /* SectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionType.swift; sourceTree = "<group>"; };
+		BCF68CC72330D6E600AA5DEB /* SettingCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCellType.swift; sourceTree = "<group>"; };
+		BCF68CC92330D7AD00AA5DEB /* ExampleCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCellType.swift; sourceTree = "<group>"; };
+		BCF68CD02330E1C300AA5DEB /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		BCF68CD22330E76A00AA5DEB /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
 		D73111E86BACC79851D0D985 /* Pods_Toaster_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Toaster_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF70B0AF6222499C1D6EC4AA /* Pods-Toaster_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toaster_Example.debug.xcconfig"; path = "Target Support Files/Pods-Toaster_Example/Pods-Toaster_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,9 +116,9 @@
 		607FACD21AFB9204008FA782 /* Example for Toaster */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				BCF68CA0232FEF0400AA5DEB /* Code */,
-				BCF68C9F232FEEF300AA5DEB /* Resource */,
+				BCF68CCC2330DC4600AA5DEB /* Application */,
+				BCF68CC12330D5D700AA5DEB /* Example */,
+				BCF68CC22330D5F500AA5DEB /* Resource */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for Toaster";
@@ -159,23 +169,60 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BCF68C9F232FEEF300AA5DEB /* Resource */ = {
+		BCF68CC12330D5D700AA5DEB /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				BCF68CCF2330E1AC00AA5DEB /* Cell */,
+				BCF68CCB2330D85F00AA5DEB /* Template */,
+				BCF68CC42330D63900AA5DEB /* Enum */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
 			);
-			name = Resource;
+			path = Example;
 			sourceTree = "<group>";
 		};
-		BCF68CA0232FEF0400AA5DEB /* Code */ = {
+		BCF68CC22330D5F500AA5DEB /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		BCF68CC42330D63900AA5DEB /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				BCF68CC52330D64F00AA5DEB /* SectionType.swift */,
+				BCF68CC72330D6E600AA5DEB /* SettingCellType.swift */,
+				BCF68CC92330D7AD00AA5DEB /* ExampleCellType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		BCF68CCB2330D85F00AA5DEB /* Template */ = {
+			isa = PBXGroup;
+			children = (
 				BCF68C9D232FEEEE00AA5DEB /* FeedbackNotification.swift */,
 			);
-			name = Code;
+			path = Template;
+			sourceTree = "<group>";
+		};
+		BCF68CCC2330DC4600AA5DEB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		BCF68CCF2330E1AC00AA5DEB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BCF68CD02330E1C300AA5DEB /* SwitchTableViewCell.swift */,
+				BCF68CD22330E76A00AA5DEB /* ExampleTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,7 +399,12 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				BCF68C9E232FEEEE00AA5DEB /* FeedbackNotification.swift in Sources */,
+				BCF68CD12330E1C300AA5DEB /* SwitchTableViewCell.swift in Sources */,
+				BCF68CCA2330D7AD00AA5DEB /* ExampleCellType.swift in Sources */,
+				BCF68CD32330E76A00AA5DEB /* ExampleTableViewCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				BCF68CC62330D64F00AA5DEB /* SectionType.swift in Sources */,
+				BCF68CC82330D6E600AA5DEB /* SettingCellType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
