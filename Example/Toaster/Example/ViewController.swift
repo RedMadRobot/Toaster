@@ -31,14 +31,16 @@ class ViewController: UIViewController, NotificationPresentable {
     // MARK: - Private methods
     
     private func configureAppearance() {
+        NotificationAppearance.shared.textFont = .boldSystemFont(ofSize: 16)
     }
     
     private func configureTableView() {
         tableView.estimatedRowHeight = 64
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.register(SettingSwitchTableViewCell.self, forCellReuseIdentifier: SettingSwitchTableViewCell.reuseIdentifier)
-        tableView.register(ExampleTableViewCell.self, forCellReuseIdentifier: ExampleTableViewCell.reuseIdentifier)
-
+        tableView.register(SettingSwitchTableViewCell.self,
+                           forCellReuseIdentifier: SettingSwitchTableViewCell.reuseIdentifier)
+        tableView.register(ExampleTableViewCell.self,
+                           forCellReuseIdentifier: ExampleTableViewCell.reuseIdentifier)
     }
 }
 
@@ -65,7 +67,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch sections[indexPath.section] {
         case .settings:
-            let cell = tableView.dequeueReusableCell(withIdentifier: SettingSwitchTableViewCell.reuseIdentifier, for: indexPath) as! SettingSwitchTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: SettingSwitchTableViewCell.reuseIdentifier,
+                                                     for: indexPath) as! SettingSwitchTableViewCell
             cell.indexPath = indexPath
             cell.delegate = self
             cell.configure(with: settings[indexPath.row].title)
@@ -80,7 +83,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
             }
             return cell
         case .actions:
-            let cell = tableView.dequeueReusableCell(withIdentifier: ExampleTableViewCell.reuseIdentifier, for: indexPath) as! ExampleTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: ExampleTableViewCell.reuseIdentifier,
+                                                     for: indexPath) as! ExampleTableViewCell
             cell.configure(with: example[indexPath.row].title)
             return cell
         

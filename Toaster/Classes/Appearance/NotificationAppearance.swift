@@ -18,7 +18,7 @@ public final class NotificationAppearance: ToasterAppearance {
     public var successColor: UIColor = .green
     public var warningColor: UIColor = .orange
     public var errorColor: UIColor = .red
-    public var textFont: UIFont = .boldSystemFont(ofSize: 16)
+    public var textFont: UIFont = .systemFont(ofSize: 16)
     public var textColor: UIColor = .white
     public var numberOfLines: Int = 0
     public var textAlignment: NSTextAlignment = .center

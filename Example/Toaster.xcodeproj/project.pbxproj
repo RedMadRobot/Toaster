@@ -172,9 +172,9 @@
 		BCF68CC12330D5D700AA5DEB /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				BCF68CCF2330E1AC00AA5DEB /* Cell */,
 				BCF68CCB2330D85F00AA5DEB /* Template */,
 				BCF68CC42330D63900AA5DEB /* Enum */,
+				BCF68CCF2330E1AC00AA5DEB /* Cell */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 			);
 			path = Example;
