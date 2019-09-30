@@ -1,5 +1,5 @@
 import XCTest
-import Toaster
+//import Toaster
 
 class Tests: XCTestCase {
     
