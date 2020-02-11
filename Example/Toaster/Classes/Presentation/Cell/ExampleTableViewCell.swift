@@ -10,12 +10,14 @@ import UIKit
 
 final class ExampleTableViewCell: UITableViewCell {
     
+    
     // MARK: - Constants
     
     static let reuseIdentifier = "ExampleTableViewCell"
     
-    // MARK: - UI Components
     
+    // MARK: - Initializers
+
     private let actionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -24,8 +26,6 @@ final class ExampleTableViewCell: UITableViewCell {
         label.textColor = .darkGray
         return label
     }()
-    
-    // MARK: - Con(De)structor
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -37,7 +37,8 @@ final class ExampleTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Internal methods
+    
+    // MARK: - Public Methods
     
     func configure(with text: String) {
         actionLabel.text = text
@@ -45,9 +46,11 @@ final class ExampleTableViewCell: UITableViewCell {
     
 }
 
-// MARK: - Layout
 
 extension ExampleTableViewCell {
+    
+    
+    // MARK: - Private Methods
     
     private func layout() {
         actionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
