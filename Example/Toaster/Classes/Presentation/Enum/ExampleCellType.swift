@@ -7,18 +7,16 @@
 //
 
 enum ExampleCellType: Int, CaseIterable {
-    case success
-    case warning
-    case error
+    case ok
+    case bad
     
     var title: String {
         switch self {
-        case .success:
-            return "Успешное выполнение"
-        case .warning:
-            return "Предупреждение"
-        case .error:
-            return "Ошибка"
+        case .ok:
+            return "Успешная операция"
+        case .bad:
+            return "Ошибка выполнения"
         }
     }
+    
 }

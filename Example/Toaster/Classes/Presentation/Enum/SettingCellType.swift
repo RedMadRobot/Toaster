@@ -7,15 +7,17 @@
 //
 
 enum SettingCellType: Int, CaseIterable {
-    case blurView
     case singleView
+    case statusBarStyle
     
     var title: String {
         switch self {
-        case .blurView:
-            return "Блюр вместо цветов"
         case .singleView:
             return "Одинарная нотификация"
+        case .statusBarStyle:
+            return "Белый статус бар"
         }
+        
     }
+    
 }

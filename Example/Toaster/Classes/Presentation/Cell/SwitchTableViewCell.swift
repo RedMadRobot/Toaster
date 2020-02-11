@@ -6,8 +6,6 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
-import Foundation
-
 import UIKit
 
 protocol SettingSwitchTableViewCellDelegate: NSObjectProtocol {
@@ -16,23 +14,31 @@ protocol SettingSwitchTableViewCellDelegate: NSObjectProtocol {
 
 final class SettingSwitchTableViewCell: UITableViewCell {
     
+    
     // MARK: - Constants
     
     static let reuseIdentifier = "SettingSwitchTableViewCell"
     
-    // MARK: - Properties
     
+    // MARK: - Public Properties
+    
+    /// Для вычисления ячейки в методе делегата
     var indexPath: IndexPath?
+    
+    /// Внешнее свойство для положения свитча
     var isSwitchOn: Bool? = nil {
         didSet {
             guard let isSwitchOn = isSwitchOn else {return}
             settingSwitch.isOn = isSwitchOn
         }
     }
+    
+    /// Для уведомления об изменении положения свитча
     weak var delegate: SettingSwitchTableViewCellDelegate?
     
-    // MARK: - UI Components
-    
+
+    // MARK: - Private Properties
+
     private let settingLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -47,8 +53,9 @@ final class SettingSwitchTableViewCell: UITableViewCell {
         return settingSwitch
     }()
     
-    // MARK: - Con(De)structor
     
+    // MARK: - Initializers
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -63,11 +70,13 @@ final class SettingSwitchTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Internal methods
     
+    // MARK: - Public methods
+
     func configure(with text: String) {
         settingLabel.text = text
     }
+    
     
     // MARK: - Private methods
     
@@ -79,18 +88,17 @@ final class SettingSwitchTableViewCell: UITableViewCell {
         settingSwitch.addTarget(self, action: #selector(switchValueChanged), for: .valueChanged)
     }
     
-    // MARK: - Private selector
-    
     @objc private func switchValueChanged() {
         delegate?.settingSwitchTableViewCell(self, switchUpdated: settingSwitch.isOn)
     }
     
-    
 }
 
-// MARK: - Layout
 
 extension SettingSwitchTableViewCell {
+    
+    
+    // MARK: - Private methods
     
     private func layout() {
         settingLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true

@@ -13,14 +13,18 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		607FACEC1AFB9204008FA782 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* ViewControllerTests.swift */; };
 		8D3F638CC370C5C6B00345B8 /* Pods_Toaster_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454CE332FAC2F272F5616D57 /* Pods_Toaster_Tests.framework */; };
-		BCF68C9E232FEEEE00AA5DEB /* FeedbackNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF68C9D232FEEEE00AA5DEB /* FeedbackNotification.swift */; };
+		BC49002B2370B8D50039F7CE /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC49002A2370B8D50039F7CE /* NotificationView.swift */; };
+		BCE97750233BCC4800C46141 /* DefaultCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE9774F233BCC4800C46141 /* DefaultCellType.swift */; };
+		BCE9776F2342024D00C46141 /* ViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE9776E2342024D00C46141 /* ViewControllerTestCase.swift */; };
+		BCE977722342072900C46141 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE977712342072900C46141 /* UIView+.swift */; };
 		BCF68CC62330D64F00AA5DEB /* SectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF68CC52330D64F00AA5DEB /* SectionType.swift */; };
 		BCF68CC82330D6E600AA5DEB /* SettingCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF68CC72330D6E600AA5DEB /* SettingCellType.swift */; };
 		BCF68CCA2330D7AD00AA5DEB /* ExampleCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF68CC92330D7AD00AA5DEB /* ExampleCellType.swift */; };
 		BCF68CD12330E1C300AA5DEB /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF68CD02330E1C300AA5DEB /* SwitchTableViewCell.swift */; };
 		BCF68CD32330E76A00AA5DEB /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF68CD22330E76A00AA5DEB /* ExampleTableViewCell.swift */; };
+		BCFDE6382370C55E00A4E2C5 /* FeedbackNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF68C9D232FEEEE00AA5DEB /* FeedbackNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +52,13 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Toaster_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Toaster_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		69DFEFFDFD37DCD61C574299 /* Pods-Toaster_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toaster_Tests.release.xcconfig"; path = "Target Support Files/Pods-Toaster_Tests/Pods-Toaster_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8EF87548BF8A39FAC6C0BEFA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BC49002A2370B8D50039F7CE /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		BCE9774F233BCC4800C46141 /* DefaultCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCellType.swift; sourceTree = "<group>"; };
+		BCE9776E2342024D00C46141 /* ViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTestCase.swift; sourceTree = "<group>"; };
+		BCE977712342072900C46141 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		BCF68C9D232FEEEE00AA5DEB /* FeedbackNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackNotification.swift; sourceTree = "<group>"; };
 		BCF68CC52330D64F00AA5DEB /* SectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionType.swift; sourceTree = "<group>"; };
 		BCF68CC72330D6E600AA5DEB /* SettingCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCellType.swift; sourceTree = "<group>"; };
@@ -116,8 +124,7 @@
 		607FACD21AFB9204008FA782 /* Example for Toaster */ = {
 			isa = PBXGroup;
 			children = (
-				BCF68CCC2330DC4600AA5DEB /* Application */,
-				BCF68CC12330D5D700AA5DEB /* Example */,
+				BCE977542341018200C46141 /* Classes */,
 				BCF68CC22330D5F500AA5DEB /* Resource */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
@@ -136,7 +143,9 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				BCE977702342049C00C46141 /* Helpers */,
+				BCE9776D2342022B00C46141 /* Case */,
+				607FACEB1AFB9204008FA782 /* ViewControllerTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -169,15 +178,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BCF68CC12330D5D700AA5DEB /* Example */ = {
+		BCE97751233BCF4C00C46141 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				BCF68CCB2330D85F00AA5DEB /* Template */,
 				BCF68CC42330D63900AA5DEB /* Enum */,
 				BCF68CCF2330E1AC00AA5DEB /* Cell */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 			);
-			path = Example;
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BCE977542341018200C46141 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BCF68CCB2330D85F00AA5DEB /* Custom Notification */,
+				BCE97751233BCF4C00C46141 /* Presentation */,
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BCE9776D2342022B00C46141 /* Case */ = {
+			isa = PBXGroup;
+			children = (
+				BCE9776E2342024D00C46141 /* ViewControllerTestCase.swift */,
+			);
+			path = Case;
+			sourceTree = "<group>";
+		};
+		BCE977702342049C00C46141 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BCE977712342072900C46141 /* UIView+.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		BCF68CC22330D5F500AA5DEB /* Resource */ = {
@@ -196,24 +230,18 @@
 				BCF68CC52330D64F00AA5DEB /* SectionType.swift */,
 				BCF68CC72330D6E600AA5DEB /* SettingCellType.swift */,
 				BCF68CC92330D7AD00AA5DEB /* ExampleCellType.swift */,
+				BCE9774F233BCC4800C46141 /* DefaultCellType.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
 		};
-		BCF68CCB2330D85F00AA5DEB /* Template */ = {
+		BCF68CCB2330D85F00AA5DEB /* Custom Notification */ = {
 			isa = PBXGroup;
 			children = (
 				BCF68C9D232FEEEE00AA5DEB /* FeedbackNotification.swift */,
+				BC49002A2370B8D50039F7CE /* NotificationView.swift */,
 			);
-			path = Template;
-			sourceTree = "<group>";
-		};
-		BCF68CCC2330DC4600AA5DEB /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-			);
-			path = Application;
+			path = "Custom Notification";
 			sourceTree = "<group>";
 		};
 		BCF68CCF2330E1AC00AA5DEB /* Cell */ = {
@@ -398,9 +426,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				BCF68C9E232FEEEE00AA5DEB /* FeedbackNotification.swift in Sources */,
 				BCF68CD12330E1C300AA5DEB /* SwitchTableViewCell.swift in Sources */,
+				BCFDE6382370C55E00A4E2C5 /* FeedbackNotification.swift in Sources */,
+				BC49002B2370B8D50039F7CE /* NotificationView.swift in Sources */,
 				BCF68CCA2330D7AD00AA5DEB /* ExampleCellType.swift in Sources */,
+				BCE97750233BCC4800C46141 /* DefaultCellType.swift in Sources */,
 				BCF68CD32330E76A00AA5DEB /* ExampleTableViewCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				BCF68CC62330D64F00AA5DEB /* SectionType.swift in Sources */,
@@ -412,7 +442,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				BCE977722342072900C46141 /* UIView+.swift in Sources */,
+				BCE9776F2342024D00C46141 /* ViewControllerTestCase.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* ViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,7 +523,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -537,7 +569,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -550,6 +582,7 @@
 			baseConfigurationReference = EF70B0AF6222499C1D6EC4AA /* Pods-Toaster_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Toaster/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -566,6 +599,7 @@
 			baseConfigurationReference = 4A38D24B10F58C6F1E142323 /* Pods-Toaster_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Toaster/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -581,6 +615,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 349D52BC9D947AD6864FAA4F /* Pods-Toaster_Tests.debug.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -603,6 +638,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 69DFEFFDFD37DCD61C574299 /* Pods-Toaster_Tests.release.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
