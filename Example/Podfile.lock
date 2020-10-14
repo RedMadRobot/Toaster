@@ -1,5 +1,5 @@
 PODS:
-  - Toaster (0.1.0)
+  - Toaster (0.1.1)
 
 DEPENDENCIES:
   - Toaster (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Toaster: d0c2955828653dc44c03f18cf0a52b8c120de023
+  Toaster: 63e45a54648550c559d50a5ff807a7eca733c972
 
 PODFILE CHECKSUM: ad16e8bb4171bb55ecba048f8adc6828b3e02201
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3

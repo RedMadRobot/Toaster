@@ -43,7 +43,7 @@ final class ViewController: UIViewController, NotificationPresentable {
     
     private func configureTableView() {
         tableView.estimatedRowHeight = 64
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.register(SettingSwitchTableViewCell.self,
                            forCellReuseIdentifier: SettingSwitchTableViewCell.reuseIdentifier)
         tableView.register(ExampleTableViewCell.self,

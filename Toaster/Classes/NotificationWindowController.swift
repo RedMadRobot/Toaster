@@ -84,9 +84,9 @@ public final class NotificationWindowController {
         subview.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(subview)
         NSLayoutConstraint.activate([
-            subview.rightAnchor.constraint(equalTo: view.rightAnchor),
-            subview.leftAnchor.constraint(equalTo: view.leftAnchor),
-            subview.topAnchor.constraint(equalTo: view.topAnchor)
+            subview.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -configuration.insets.right),
+            subview.leftAnchor.constraint(equalTo: view.leftAnchor, constant: configuration.insets.left),
+            subview.topAnchor.constraint(equalTo: view.topAnchor, constant: configuration.insets.top)
         ])
         subview.layoutIfNeeded()
         updateWindow()
