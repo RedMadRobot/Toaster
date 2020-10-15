@@ -16,4 +16,8 @@ public extension NotificationPresentable {
     func showFeedback(view: UIView) {
         NotificationWindowController.shared.show(view)
     }
+    
+    func hideFeedback() {
+        NotificationWindowController.shared.hide()
+    }
 }

@@ -45,9 +45,10 @@ public final class NotificationWindowController {
     // MARK: - Public methods
 
     public func show(_ view: UIView) {
-        if configuration.isShowToastSingle{
+        if configuration.isShowToastSingle {
             addNotificationView(view)
         } else {
+            currentNotificationView = view
             addSubview(view)
             move(view, to: .up)
         }
@@ -62,6 +63,13 @@ public final class NotificationWindowController {
             }
             self.hideUp(view)
         }
+    }
+    
+    public func hide() {
+        guard let notificationView = currentNotificationView else {
+            return
+        }
+        hideUp(notificationView)
     }
     
     
