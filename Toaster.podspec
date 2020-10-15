@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Toaster'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Notification view'
   s.homepage         = 'https://git.redmadrobot.com/foundation-ios/toaster.git'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
