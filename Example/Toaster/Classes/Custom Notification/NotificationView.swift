@@ -13,6 +13,13 @@ final class NotificationView: UIView {
     // MARK: - Private Properties
     public var isBlurView: Bool
     
+    private lazy var roundCornersView: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 8
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     ///Лейбл текста в нотификации
     private lazy var textLabel: UILabel = {
         let textLabel = UILabel()
@@ -22,6 +29,7 @@ final class NotificationView: UIView {
         textLabel.lineBreakMode = .byWordWrapping
         textLabel.textColor = .white
         textLabel.accessibilityIdentifier = "notification_text"
+        textLabel.translatesAutoresizingMaskIntoConstraints = false
         return textLabel
     }()
 
@@ -37,7 +45,13 @@ final class NotificationView: UIView {
 
         self.commonInit()
         self.textLabel.text = text
-        backgroundColor = color == nil ? .clear : color
+        
+        if isEdgeToEdgeEnabled {
+            backgroundColor = color == nil ? .clear : color
+        } else {
+            roundCornersView.backgroundColor = color
+        }
+        
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(type)
     }
@@ -73,14 +87,30 @@ final class NotificationView: UIView {
                 textLabel.leadingAnchor.constraint(equalTo: blurView.layoutMarginsGuide.leadingAnchor),
                 textLabel.trailingAnchor.constraint(equalTo: blurView.layoutMarginsGuide.trailingAnchor)])
 
-        } else {
-            textLabel.translatesAutoresizingMaskIntoConstraints = false
+        } else if isEdgeToEdgeEnabled {
             addSubview(textLabel)
+            
             NSLayoutConstraint.activate([
                 textLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
                 textLabel.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -12),
                 textLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
                 textLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -16)])
+        } else {
+            addSubview(roundCornersView)
+            
+            roundCornersView.addSubview(textLabel)
+            
+            NSLayoutConstraint.activate([
+                textLabel.topAnchor.constraint(equalTo: roundCornersView.topAnchor, constant: 16),
+                textLabel.bottomAnchor.constraint(equalTo: roundCornersView.bottomAnchor, constant: -12),
+                textLabel.leadingAnchor.constraint(equalTo: roundCornersView.leadingAnchor, constant: 16),
+                textLabel.trailingAnchor.constraint(equalTo: roundCornersView.trailingAnchor, constant: -16),
+                
+                roundCornersView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 12),
+                roundCornersView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -12),
+                roundCornersView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 8),
+                roundCornersView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+            ])
         }
     }
 }
