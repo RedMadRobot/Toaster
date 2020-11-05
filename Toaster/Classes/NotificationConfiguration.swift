@@ -28,8 +28,6 @@ public struct NotificationConfiguration {
     /// Скрывать статус бар или нет, актуально на iOS 12 и ниже
     public var isStatusBarHidden: Bool = false
     
-    /// Отступы view от границ экрана
-    public var insets: UIEdgeInsets = .zero
     
     // MARK: - Private Properties
 

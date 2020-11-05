@@ -9,6 +9,8 @@
 import UIKit
 import Toaster
 
+var isEdgeToEdgeEnabled = true
+
 final class ViewController: UIViewController, NotificationPresentable {
     
     
@@ -93,6 +95,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
                 case .statusBarStyle:
                     cell.isSwitchOn =
                         NotificationWindowController.shared.configuration.isStatusBarLight
+                case .edgeToEdge:
+                    cell.isSwitchOn = isEdgeToEdgeEnabled
                 }
             }
             return cell
@@ -162,6 +166,8 @@ extension ViewController: SettingSwitchTableViewCellDelegate {
             NotificationWindowController.shared.configuration.isShowToastSingle = isOn
         case .statusBarStyle:
             NotificationWindowController.shared.configuration.isStatusBarLight = isOn
+        case .edgeToEdge:
+            isEdgeToEdgeEnabled = isOn
         }
     }
 }

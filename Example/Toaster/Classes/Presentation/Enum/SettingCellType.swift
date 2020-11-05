@@ -9,6 +9,7 @@
 enum SettingCellType: Int, CaseIterable {
     case singleView
     case statusBarStyle
+    case edgeToEdge
     
     var title: String {
         switch self {
@@ -16,6 +17,8 @@ enum SettingCellType: Int, CaseIterable {
             return "Одинарная нотификация"
         case .statusBarStyle:
             return "Белый статус бар"
+        case .edgeToEdge:
+            return "Edge-to-edge"
         }
         
     }

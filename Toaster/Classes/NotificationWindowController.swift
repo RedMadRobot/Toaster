@@ -30,6 +30,9 @@ public final class NotificationWindowController {
         
     private weak var currentNotificationView: UIView?
     
+    /// Вьюшки скрываемые в данный момент времени
+    private var hidingViews = [UIView]()
+    
     private lazy var window: UIWindow = {
         let window = NotificationWindow(frame: UIScreen.main.bounds)
         window.layer.speed = UIApplication.shared.keyWindow!.layer.speed
@@ -57,8 +60,11 @@ public final class NotificationWindowController {
         view.addGestureRecognizer(pan)
         
         animateMove(view, to: .down)
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + configuration.intervalTime) {
-            guard view.superview != nil else {
+            guard
+                self.hidingViews.contains(view) == false,
+                view.superview != nil else {
                 return
             }
             self.hideUp(view)
@@ -85,18 +91,19 @@ public final class NotificationWindowController {
     }
     
     private func updateWindow() {
-        self.window.isHidden = self.view.subviews.isEmpty
+        window.isHidden = view.subviews.isEmpty
     }
     
     private func addSubview(_ subview: UIView) {
         subview.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(subview)
+        
         NSLayoutConstraint.activate([
-            subview.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -configuration.insets.right),
-            subview.leftAnchor.constraint(equalTo: view.leftAnchor, constant: configuration.insets.left),
-            subview.topAnchor.constraint(equalTo: view.topAnchor, constant: configuration.insets.top)
+            subview.rightAnchor.constraint(equalTo: view.rightAnchor),
+            subview.leftAnchor.constraint(equalTo: view.leftAnchor),
+            subview.topAnchor.constraint(equalTo: view.topAnchor)
         ])
-        subview.layoutIfNeeded()
+        view.layoutIfNeeded()
         updateWindow()
     }
     
@@ -119,7 +126,14 @@ public final class NotificationWindowController {
     }
     
     private func hideUp(_ view: UIView) {
+        hidingViews.append(view)
+        if currentNotificationView === view {
+            currentNotificationView = nil
+        }
         animateMove(view, to: .up) { _ in
+            if let index = self.hidingViews.firstIndex(of: view) {
+                self.hidingViews.remove(at: index)
+            }
             view.removeFromSuperview()
             self.updateWindow()
         }
