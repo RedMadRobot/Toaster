@@ -5,7 +5,7 @@
 ##  Установка через CocoaPods
 
 ```ruby
-pod 'Toaster', :git => "https://git.redmadrobot.com/foundation-ios/toaster.git"
+pod 'Toaster', :git => "git@github.com:RedMadRobot/Toaster.git"
 ```
 
 ##  Использование
